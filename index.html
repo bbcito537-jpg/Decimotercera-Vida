@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#080d22" />
+  <title>Nuestra decimotercera vida ✦ Para Bella</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="universe" aria-hidden="true"></canvas>
+  <main id="app">
+    <section id="welcome" class="scene active" aria-label="Bienvenida">
+      <div class="eyebrow">UNA PEQUEÑA HISTORIA PARA BELLA</div>
+      <div class="opening-sigil">✧ <span>13</span> ✧</div>
+      <h1>Hay historias que<br>empiezan con un número.</h1>
+      <p class="intro">Esta empezó contigo.</p>
+      <button class="primary" id="start">Toca para comenzar <span>✦</span></button>
+      <p class="footnote">Con piano, estrellas y un pedacito de nosotros.</p>
+    </section>
+
+    <section id="sky" class="scene" aria-label="Las tres estrellas">
+      <div class="sky-head"><span class="eyebrow">EL ORIGEN DE NUESTRO 13</span><h2>Tres estrellas. Una historia.</h2><p>Toca cada una de las estrellas para descubrir cómo comenzó todo.</p></div>
+      <div class="star-stage" id="starStage">
+        <button class="memory-star" data-star="0" aria-label="Primera estrella"><span>✦</span><small>I</small></button>
+        <button class="memory-star" data-star="1" aria-label="Segunda estrella"><span>✦</span><small>II</small></button>
+        <button class="memory-star" data-star="2" aria-label="Tercera estrella"><span>✦</span><small>III</small></button>
+      </div>
+      <div class="memory-card" id="memoryCard" aria-live="polite"><div class="mini-label">EL PRIMER DESTELLO</div><h3>Todo empezó contigo</h3><p>«Mi amor, te lo juro que se me está apareciendo el número trece por todos lados».</p><p>Te emocionabas, te reías y me lo contabas como si el universo te estuviera guiñando un ojo. Y yo terminaba sonriendo contigo.</p></div>
+      <p class="sky-progress" id="skyProgress">0 de 3 estrellas descubiertas</p>
+      <button class="primary hidden" id="formBook">Ver lo que guardan las estrellas ✧</button>
+    </section>
+
+    <section id="transition" class="scene" aria-label="Constelación">
+      <p class="eyebrow">Y ENTONCES EL NÚMERO CAMBIÓ...</p>
+      <div id="constellation" class="constellation" aria-label="Trece estrellas formando un corazón"></div>
+      <h2>Dejó de ser una casualidad.</h2>
+      <p>Se convirtió en recuerdos, besitos, promesas y futuros que todavía soñamos juntos.</p>
+      <div class="transition-line">Trece vidas. Trece maneras de encontrarte.</div>
+      <button id="revealCover" class="primary">Abrir nuestro universo ✦</button>
+    </section>
+
+    <section id="bookScene" class="scene" aria-label="Libro interactivo">
+      <div class="book-toolbar"><button id="homeButton" class="subtle" aria-label="Volver al cielo">✦ Cielo</button><span id="counter">Portada</span><button id="musicToggle" class="subtle" aria-label="Activar o desactivar música">♫ Piano: ON</button></div>
+      <div class="book-wrap"><article class="book" id="book"><div class="book-inner" id="bookInner"></div></article></div>
+      <div class="book-navigation"><button id="prevPage" class="nav" aria-label="Página anterior">← Anterior</button><div class="page-dots" id="pageDots"></div><button id="nextPage" class="nav">Siguiente →</button></div>
+      <div class="book-help">Desliza las páginas con el dedo o usa las flechas. Busca el pequeño ✦ 13 de cada vida.</div>
+    </section>
+  </main>
+  <div id="finale" class="finale" role="dialog" aria-modal="true" aria-label="El comienzo de nuestras próximas trece vidas" aria-hidden="true">
+    <canvas id="finaleCanvas" aria-hidden="true"></canvas>
+    <div class="finale-content">
+      <div class="finale-kicker" id="finaleKicker">EL UNIVERSO NOS RECUERDA</div>
+      <div class="finale-number" id="finaleNumber">13 <small>/ 13</small></div>
+      <div class="finale-stories" id="finaleStories" aria-live="polite"></div>
+      <div class="finale-core" id="finaleCore" aria-hidden="true"></div>
+      <div class="finale-message" id="finaleMessage" aria-live="polite"></div>
+      <button class="primary finale-button hidden" id="finaleRestart">✧ Comenzar nuestras próximas 13 vidas</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
